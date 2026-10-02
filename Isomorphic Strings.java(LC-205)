@@ -1,0 +1,13 @@
+class Solution {
+    public boolean isIsomorphic(String s, String t) {
+        for(int i=0;i<s.length();i++){
+            int a=s.indexOf(s.charAt(i));
+            int b=t.indexOf(t.charAt(i));
+            if(a!=b){
+                return false;
+            }
+        }
+        return true;
+        
+    }
+}
