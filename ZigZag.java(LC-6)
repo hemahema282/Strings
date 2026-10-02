@@ -1,0 +1,26 @@
+class Solution {
+    public String convert(String s, int numRows) {
+        if(numRows==1){
+            return s;
+        }
+        String[]c=new String[numRows];
+        for(int i=0;i<c.length;i++){
+            c[i]="";
+        }
+        int r=0;
+        boolean g=false;
+        for(char ch:s.toCharArray()){
+            c[r]+=ch;
+            if(r==0||r==numRows-1){
+                g=!g;
+            }
+            r+=g?1:-1;
+        }
+        String z="";
+        for(String x:c){
+            z=z+x;
+        }
+        return z;
+        
+    }
+}
